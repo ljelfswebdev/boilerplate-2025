@@ -1,0 +1,57 @@
+.form-col-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .form-col-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 16px;
+  }
+  
+  .form-input {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  
+    label {
+      font-weight: 700;
+    }
+  
+    input,
+    textarea {
+      border: 2px solid var(--grey);
+      border-radius: 5px;
+      padding: 0px 12px;
+      outline: 2px solid transparent;
+      outline-offset: -2px;
+      transition: outline 0.2s ease;
+      font-family: inherit;
+      font-size: 16px;
+    }
+  
+    input:hover,
+    textarea:hover,
+    input:focus,
+    textarea:focus,
+    input:not(:placeholder-shown),
+    textarea:not(:placeholder-shown) {
+      outline: 2px solid var(--primary);
+    }
+
+    input {
+        height: 50px;
+      }
+  
+    textarea {
+      height: 200px;
+      resize: vertical;
+      padding:12px;
+    }
+  }
